@@ -27,5 +27,17 @@
     return self;
 }
 
+// Retorna um Pokemon aleatorio
+-(Pokemon*)procurarPokemon{
+    
+    PokeMundo *mundo = [[PokeMundo alloc]init];
+    Pokemon *pokemon = [[Pokemon alloc]init];
+    pokemon = mundo.pokemons[arc4random_uniform((int)[mundo.pokemons count])];
+    pokemon.exp = [NSNumber numberWithUnsignedInteger:arc4random_uniform(99)];
+    pokemon.level = [NSNumber numberWithUnsignedInteger:arc4random_uniform(5)];
+    return pokemon;
+    
+}
+
 
 @end
