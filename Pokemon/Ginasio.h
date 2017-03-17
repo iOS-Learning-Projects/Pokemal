@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Jogador.h"
 
 @interface Ginasio : NSObject
     
 @property (retain) NSString * nome;
-@property (retain) Jogador * lider;
-    
+@property (retain) NSObject * lider;
+
+-(instancetype)initWithNome:(NSString*)currentNome;
 
 @end

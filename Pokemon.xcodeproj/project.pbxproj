@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E7438951E7C8FC4008C6F40 /* TipoPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7438941E7C8FC4008C6F40 /* TipoPokemon.m */; };
 		9EC2DEB11E7C2B7B00D59AE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2DEB01E7C2B7B00D59AE1 /* main.m */; };
 		9EC2DEB91E7C2B9900D59AE1 /* Jogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2DEB81E7C2B9900D59AE1 /* Jogador.m */; };
 		9EC2DEBC1E7C2BA600D59AE1 /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2DEBB1E7C2BA600D59AE1 /* Pokemon.m */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9E7438931E7C8FC3008C6F40 /* TipoPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipoPokemon.h; sourceTree = "<group>"; };
+		9E7438941E7C8FC4008C6F40 /* TipoPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipoPokemon.m; sourceTree = "<group>"; };
 		9EC2DEAD1E7C2B7B00D59AE1 /* Pokemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Pokemon; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC2DEB01E7C2B7B00D59AE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EC2DEB71E7C2B9900D59AE1 /* Jogador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogador.h; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				9EC2DEBE1E7C2BB600D59AE1 /* Ginasio.m */,
 				9EC2DEC31E7C491400D59AE1 /* PokeMundo.h */,
 				9EC2DEC41E7C491400D59AE1 /* PokeMundo.m */,
+				9E7438931E7C8FC3008C6F40 /* TipoPokemon.h */,
+				9E7438941E7C8FC4008C6F40 /* TipoPokemon.m */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				9EC2DEBF1E7C2BB600D59AE1 /* Ginasio.m in Sources */,
 				9EC2DEB11E7C2B7B00D59AE1 /* main.m in Sources */,
 				9EC2DEC51E7C491400D59AE1 /* PokeMundo.m in Sources */,
+				9E7438951E7C8FC4008C6F40 /* TipoPokemon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +276,7 @@
 				9EC2DEB61E7C2B7B00D59AE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

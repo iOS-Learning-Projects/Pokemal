@@ -7,16 +7,18 @@
 //
 
 #import "Jogador.h"
+#import "PokeMundo.h"
+
 
 @implementation Jogador{
     
 }
 
-@synthesize idJogador - _idJogador;
+@synthesize idJogador = _idJogador;
 @synthesize nome = _nome;
 @synthesize pokemons = _pokemons;
 
-- (instancetype)initWithId(NSNumber*):currentIdJogador com(NSString*):currentNome{
+- (instancetype)initWithId:(NSNumber*)currentIdJogador com:(NSString*)currentNome{
     self = [super init];
     if (self) {
         _idJogador = currentIdJogador;
@@ -24,5 +26,6 @@
     }
     return self;
 }
+
 
 @end
