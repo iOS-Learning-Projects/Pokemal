@@ -10,4 +10,16 @@
 
 @implementation Ginasio
 
+@synthesize nome = _nome;
+@synthesize lider = _lider;
+
+-(instancetype)initWithNome:(NSString*)currentNome{
+    self = [super init];
+    if (self) {
+        _nome = currentNome;
+    }
+    return self;
+}
+
+
 @end

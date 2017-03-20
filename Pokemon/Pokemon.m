@@ -10,4 +10,19 @@
 
 @implementation Pokemon
 
+@synthesize nome = _nome;
+@synthesize tipo = _tipo;
+@synthesize exp = _exp;
+@synthesize level = _level;
+
+-(instancetype)initWithNome:(NSString*)currentNome com:(Tipos)currentTipo{
+    self = [super init];
+    if (self) {
+        _nome = currentNome;
+        _tipo = currentTipo;
+    }
+    return self;
+}
+
+
 @end

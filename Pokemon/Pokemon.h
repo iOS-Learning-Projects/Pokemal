@@ -7,19 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TipoPokemon.h"
 
-typedef enum tipos{
-    AGUA,
-    FOGO,
-    VENTO
-}Tipos;
 
 @interface Pokemon : NSObject
-    
+
 @property (retain) NSString * nome;
-@property (retain) Tipos * tipo;
+@property (nonatomic, assign) Tipos tipo;
 @property (retain) NSNumber * exp;
 @property (retain) NSNumber * level;
 
+-(instancetype)initWithNome:(NSString*)currentNome com:(Tipos)currentTipo;
 
 @end

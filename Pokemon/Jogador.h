@@ -10,9 +10,9 @@
 
 @interface Jogador : NSObject
 
-
 @property (retain, readonly) NSNumber * idJogador;
 @property (retain, readonly) NSString * nome;
 @property (retain) NSMutableArray * pokemons;
 
+-(instancetype)initWithId:(NSNumber*)currentIdJogador com:(NSString*)currentNome;
 @end

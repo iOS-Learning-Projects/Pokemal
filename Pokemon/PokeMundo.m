@@ -10,4 +10,17 @@
 
 @implementation PokeMundo
 
+@synthesize jogadores = _jogadores;
+@synthesize ginasios = _ginasios;
+@synthesize pokemons = _pokemons;
+
+-(instancetype)initWithGinasios:(NSMutableArray*)currentGinasios com:(NSMutableArray*)currentPokemons{
+    self = [super init];
+    if (self) {
+        _ginasios = currentGinasios;
+        _pokemons = currentPokemons;
+    }
+    return self;
+}
+
 @end
