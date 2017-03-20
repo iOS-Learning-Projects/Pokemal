@@ -11,9 +11,24 @@
 @interface TipoPokemon : NSObject
 
 typedef enum tipos{
-    AGUA,
-    FOGO,
-    VENTO
+    NORMAL,
+    FIGHT,
+    FLYING,
+    POISON,
+    GROUND,
+    ROCK,
+    BUG,
+    GHOST,
+    STEEL,
+    FIRE,
+    WATER,
+    GRASS,
+    ELETRIC,
+    PSYCHIC,
+    ICE,
+    DRAGON,
+    DARK,
+    FAIRY
 }Tipos;
 
 @end
