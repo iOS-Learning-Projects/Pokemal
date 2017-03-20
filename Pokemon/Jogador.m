@@ -16,16 +16,23 @@
 
 @synthesize idJogador = _idJogador;
 @synthesize nome = _nome;
+@synthesize sexo = _sexo;
 @synthesize pokemons = _pokemons;
 
-- (instancetype)initWithId:(NSNumber*)currentIdJogador com:(NSString*)currentNome{
+
+-(instancetype)init:(int)currentID com:(NSString*)currentNome com: (NSString*)currentSex
+                com: (Pokemon*)firstPokemon{
     self = [super init];
     if (self) {
-        _idJogador = currentIdJogador;
+        _idJogador = currentID;
         _nome = currentNome;
+        _sexo =currentSex;
+        _pokemons[0] = firstPokemon;
     }
     return self;
 }
+
+
 
 // Retorna um Pokemon aleatorio
 -(Pokemon*)procurarPokemon{

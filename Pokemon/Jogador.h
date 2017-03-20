@@ -7,12 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Pokemon.h"
+
 
 @interface Jogador : NSObject
 
-@property (retain, readonly) NSNumber * idJogador;
+@property  int idJogador;
 @property (retain, readonly) NSString * nome;
+@property (retain, readonly) NSString * sexo;
 @property (retain) NSMutableArray * pokemons;
 
--(instancetype)initWithId:(NSNumber*)currentIdJogador com:(NSString*)currentNome;
+-(instancetype)init:(int)currentID com:(NSString*)currentNome com: (NSString*)currentSex com:(Pokemon*)firstPokemon;
+
+
+
 @end
