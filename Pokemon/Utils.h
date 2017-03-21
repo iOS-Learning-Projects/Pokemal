@@ -13,4 +13,6 @@
 +(NSString *)lerEntradaDoUsuario;
 +(NSString *)lerEntradaDoUsuarioComMensagem:(NSString *)mensagem;
 
++(int)chooseFirstPokemon;
+
 @end

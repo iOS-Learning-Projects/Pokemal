@@ -12,22 +12,14 @@
 
 @synthesize pokedex = _pokedex;
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _pokedex = @{
-            
-            @"Bulbasaur" : @"Grama",
-            @"Squirtle": @"Agua",
-            @"Charmander": @"Fogo"
++(NSDictionary *)showPokemons {
+    NSDictionary *pokemons = @{
+        @"Bulbasaur" : @"Grama",
+        @"Squirtle": @"Agua",
+        @"Charmander": @"Fogo"
+    };
 
-            
-        };
-    }
-    return self;
+    return pokemons;
 }
-
-
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Pokemon.h"
 
 @interface Pokedex : NSObject
     
@@ -15,7 +16,6 @@
     
     
 -(instancetype)init;
-
-
++(NSDictionary *)showPokemons;
 
 @end
