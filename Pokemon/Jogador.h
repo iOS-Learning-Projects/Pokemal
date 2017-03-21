@@ -17,8 +17,7 @@
 @property (retain, readonly) NSString * sexo;
 @property (retain) NSMutableArray * pokemons;
 
--(instancetype)init:(int)currentID com:(NSString*)currentNome com: (NSString*)currentSex com:(Pokemon*)firstPokemon;
-
-
+-(instancetype)init NS_UNAVAILABLE;
+-(instancetype)initWithID:(int)currentID andNome:(NSString*)currentNome andSexo:(NSString*)currentSex andPokemon:(Pokemon*)firstPokemon;
 
 @end

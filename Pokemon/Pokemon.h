@@ -17,6 +17,6 @@
 @property (retain) NSNumber * exp;
 @property (retain) NSNumber * level;
 
--(instancetype)init:(NSString*)currentNome com:(Tipos)currentTipo;
+-(instancetype)initWithNome:(NSString *)currentNome andTipo:(Tipos)currentTipo;
 
 @end
