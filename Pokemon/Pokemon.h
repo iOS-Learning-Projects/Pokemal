@@ -7,16 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TipoPokemon.h"
-
 
 @interface Pokemon : NSObject
 
 @property (retain) NSString * nome;
-@property (nonatomic, assign) Tipos tipo;
+@property (retain) NSString * tipo;
 @property (retain) NSNumber * exp;
 @property (retain) NSNumber * level;
 
--(instancetype)initWithNome:(NSString *)currentNome andTipo:(Tipos)currentTipo;
+-(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo;
 
 @end

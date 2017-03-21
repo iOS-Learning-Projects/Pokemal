@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Jogador.h"
 #import "Utils.h"
+#import "Pokedex.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
         
         //Primeiro Login
  

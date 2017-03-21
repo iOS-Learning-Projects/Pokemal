@@ -15,7 +15,7 @@
 @synthesize exp = _exp;
 @synthesize level = _level;
 
--(instancetype)initWithNome:(NSString *)currentNome andTipo:(Tipos)currentTipo {
+-(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo {
     self = [super init];
     if (self) {
         _nome = currentNome;
