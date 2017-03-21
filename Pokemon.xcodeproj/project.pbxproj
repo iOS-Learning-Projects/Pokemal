@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E7438951E7C8FC4008C6F40 /* TipoPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7438941E7C8FC4008C6F40 /* TipoPokemon.m */; };
+		75045D471E81C1A600D4FCD6 /* Pokedex.m in Sources */ = {isa = PBXBuildFile; fileRef = 75045D461E81C1A600D4FCD6 /* Pokedex.m */; };
 		9EC2DEB11E7C2B7B00D59AE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2DEB01E7C2B7B00D59AE1 /* main.m */; };
 		9EC2DEB91E7C2B9900D59AE1 /* Jogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2DEB81E7C2B9900D59AE1 /* Jogador.m */; };
 		9EC2DEBC1E7C2BA600D59AE1 /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2DEBB1E7C2BA600D59AE1 /* Pokemon.m */; };
@@ -29,8 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9E7438931E7C8FC3008C6F40 /* TipoPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipoPokemon.h; sourceTree = "<group>"; };
-		9E7438941E7C8FC4008C6F40 /* TipoPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipoPokemon.m; sourceTree = "<group>"; };
+		75045D451E81C1A600D4FCD6 /* Pokedex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokedex.h; sourceTree = "<group>"; };
+		75045D461E81C1A600D4FCD6 /* Pokedex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pokedex.m; sourceTree = "<group>"; };
 		9EC2DEAD1E7C2B7B00D59AE1 /* Pokemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Pokemon; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC2DEB01E7C2B7B00D59AE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EC2DEB71E7C2B9900D59AE1 /* Jogador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogador.h; sourceTree = "<group>"; };
@@ -84,10 +84,10 @@
 				9EC2DEBE1E7C2BB600D59AE1 /* Ginasio.m */,
 				9EC2DEC31E7C491400D59AE1 /* PokeMundo.h */,
 				9EC2DEC41E7C491400D59AE1 /* PokeMundo.m */,
-				9E7438931E7C8FC3008C6F40 /* TipoPokemon.h */,
-				9E7438941E7C8FC4008C6F40 /* TipoPokemon.m */,
 				E824F9BB1E80764700F4E7A1 /* Utils.h */,
 				E824F9BC1E80764700F4E7A1 /* Utils.m */,
+				75045D451E81C1A600D4FCD6 /* Pokedex.h */,
+				75045D461E81C1A600D4FCD6 /* Pokedex.m */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 				9EC2DEB11E7C2B7B00D59AE1 /* main.m in Sources */,
 				9EC2DEC51E7C491400D59AE1 /* PokeMundo.m in Sources */,
 				E824F9BD1E80764700F4E7A1 /* Utils.m in Sources */,
-				9E7438951E7C8FC4008C6F40 /* TipoPokemon.m in Sources */,
+				75045D471E81C1A600D4FCD6 /* Pokedex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

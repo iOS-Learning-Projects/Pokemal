@@ -37,6 +37,11 @@ int main(int argc, const char * argv[]) {
         
         [player init: arc4random_uniform(100) com:nomePlayer com: sex com:first]; // inicializa o jogador.
         
+        
+        
+        
+        
+        
     }
     return 0;
 }
