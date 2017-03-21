@@ -19,9 +19,8 @@
 @synthesize sexo = _sexo;
 @synthesize pokemons = _pokemons;
 
-
--(instancetype)init:(int)currentID com:(NSString*)currentNome com: (NSString*)currentSex
-                com: (Pokemon*)firstPokemon{
+-(instancetype)initWithID:(int)currentID andNome:(NSString*)currentNome
+                  andSexo:(NSString*)currentSex andPokemon:(Pokemon*)firstPokemon {
     self = [super init];
     if (self) {
         _idJogador = currentID;
@@ -32,11 +31,9 @@
     return self;
 }
 
-
-
 // Retorna um Pokemon aleatorio
 -(Pokemon*)procurarPokemon{
-    
+
     PokeMundo *mundo = [[PokeMundo alloc]init];
     Pokemon *pokemon = [[Pokemon alloc]init];
     pokemon = mundo.pokemons[arc4random_uniform((int)[mundo.pokemons count])];
