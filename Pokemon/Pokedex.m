@@ -18,10 +18,9 @@
     if (self) {
         _pokedex = @{
             
-            @"Bulbasaur" : @"Grama",
-            @"Squirtle": @"Agua",
-            @"Charmander": @"Fogo"
-
+            @1 : @{@"Bulbasaur" : @"Grama"},
+            @2 : @{@"Squirtle": @"Agua"},
+            @3 : @{@"Charmander": @"Fogo"}
             
         };
     }
