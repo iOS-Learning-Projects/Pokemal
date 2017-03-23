@@ -52,27 +52,27 @@
     [iniciais addObject: exeggcute];
     
     NSMutableArray *pokemonsBrock = [[NSMutableArray alloc]init];
-    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
-    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Paras" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
-    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Exeggcute" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:2]];
+    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Paras" andTipo:@"GRAMA" andExp:0 andLevel:2]];
+    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Exeggcute" andTipo:@"GRAMA" andExp:0 andLevel:2]];
     Jogador *brock = [[Jogador alloc]initWithID:101 andNome:@"Brock" andSexo:@"garoto" andPokemons:pokemonsBrock];
     
     NSMutableArray *pokemonsMisty = [[NSMutableArray alloc]init];
-    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Squirtle" andTipo:@"AGUA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
-    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Poliwag" andTipo:@"AGUA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
-    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Staryu" andTipo:@"AGUA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Squirtle" andTipo:@"AGUA" andExp:0 andLevel:2]];
+    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Poliwag" andTipo:@"AGUA" andExp:0 andLevel:2]];
+    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Staryu" andTipo:@"AGUA" andExp:0 andLevel:2]];
     Jogador *misty = [[Jogador alloc]initWithID:101 andNome:@"Misty" andSexo:@"garota" andPokemons:pokemonsMisty];
     
     NSMutableArray *pokemonsLtSurge = [[NSMutableArray alloc]init];
-    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Growlithe" andTipo:@"FOGO" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
-    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Magmar" andTipo:@"FOGO" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
-    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Chikorita" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Growlithe" andTipo:@"FOGO" andExp:0 andLevel:2]];
+    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Magmar" andTipo:@"FOGO" andExp:0 andLevel:2]];
+    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Chikorita" andTipo:@"GRAMA" andExp:0 andLevel:2]];
     Jogador *ltSurge = [[Jogador alloc]initWithID:101 andNome:@"LtSurge" andSexo:@"garoto" andPokemons:pokemonsLtSurge];
     
     NSMutableArray *pokemonsErika = [[NSMutableArray alloc]init];
-    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Ponyta" andTipo:@"FOGO" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
-    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Horsea" andTipo:@"AGUA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
-    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Charmander" andTipo:@"FOGO" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Ponyta" andTipo:@"FOGO" andExp:0 andLevel:2]];
+    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Horsea" andTipo:@"AGUA" andExp:0 andLevel:2]];
+    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Charmander" andTipo:@"FOGO" andExp:0 andLevel:2]];
     Jogador *erika = [[Jogador alloc]initWithID:101 andNome:@"Erika" andSexo:@"garota" andPokemons:pokemonsErika];
     
     NSMutableArray *ginasios = [[NSMutableArray alloc]init];
