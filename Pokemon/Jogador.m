@@ -31,7 +31,6 @@
     return self;
 }
 
-
 // Retorna um Pokemon aleatorio ou nulo
 -(Pokemon*)procurarPokemons:(NSArray*)listaPokemons{
     if([self.pokemons count] > 5){

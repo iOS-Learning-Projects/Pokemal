@@ -21,29 +21,27 @@ int main(int argc, const char * argv[]) {
         pokeMundo.iniciarMundo;
         
         //Primeiro Login
- 
-        NSString * sex = [Utils lerEntradaDoUsuarioComMensagem:
-                          @"Olá jovem treinador! Meu nome é Prof. Jabosa. Neste "
-                          "mundo existe criaturas chamadas pokemons e seu dever é capturá-las."
-                          "Mas primeiro, me diga. Voce é um garoto ou uma garota?\n"];
-
-        NSString * nomePlayer = [Utils lerEntradaDoUsuarioComMensagem:
-                                 @"\nAgora me diga, qual o seu nome?\n"];
-
-        NSString * nomePokemon = [Utils lerEntradaDoUsuarioComMensagem:
-                                  @"Ir nessa jornada sozinho é muito perigoso. "
-                                  "Por favor, leve um pokemon com voce"];
-
-        nomePokemon = @"Charmander";
+        Jogador *player = [Utils cadastrarJogador:pokeMundo.pokemons];
+        
+//        NSString * sex = [Utils lerEntradaDoUsuarioComMensagem:
+//                          @"Olá jovem treinador! Meu nome é Prof. Jabosa. Neste "
+//                          "mundo existe criaturas chamadas pokemons e seu dever é capturá-las."
+//                          "Mas primeiro, me diga. Voce é um garoto ou uma garota?\n"];
+//
+//        NSString * nomePlayer = [Utils lerEntradaDoUsuarioComMensagem:
+//                                 @"\nAgora me diga, qual o seu nome?\n"];
+//
+//        NSString * nomePokemon = [Utils lerEntradaDoUsuarioComMensagem:
+//                                  @"Ir nessa jornada sozinho é muito perigoso. "
+//                                  "Por favor, leve um pokemon com voce"];
+//
+//        nomePokemon = @"Charmander";
 
         //escolhe primeiro pokemon dentre Charmander, Bulbasauro, e Squirtle.
         
-        Pokemon *first = [[Pokemon alloc]init];
-        [first init:@"Charmander" com:FIRE];
-        
         ///---
         
-        [player init: arc4random_uniform(100) com:nomePlayer com: sex com:first]; // inicializa o jogador.
+//        [player init: arc4random_uniform(100) com:nomePlayer com: sex com:first]; // inicializa o jogador.
         
         
         

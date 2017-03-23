@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Jogador.h"
 
 @interface Utils : NSObject
 
 +(NSString *)lerEntradaDoUsuario;
 +(NSString *)lerEntradaDoUsuarioComMensagem:(NSString *)mensagem;
 
-+(int)chooseFirstPokemon;
++(Jogador*)cadastrarJogador:(NSArray*)pokemonsIniciais;
 
 @end
