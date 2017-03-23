@@ -16,12 +16,8 @@
 @synthesize level = _level;
 
 -(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo {
-    self = [super init];
-    if (self) {
-        _nome = currentNome;
-        _tipo = currentTipo;
-    }
-    return self;
+    int randomLevel = arc4random_uniform(10) + 1;
+    return [self initWithNome:currentNome andTipo:currentTipo andExp:0 andLevel:randomLevel];
 }
 
 -(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo andExp:(int)currentExp andLevel:(int)currentLevel {
