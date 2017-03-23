@@ -52,22 +52,42 @@
 
 
 +(Pokemon*)chooseFirstPokemon:(NSArray *)pokemonsIniciais{
+    
+    int aux;
+    
     printf("\nIr nessa jornada sozinho é muito perigoso. \nPor favor, leve um pokemon com voce\n");
     int index = 0;
     for (Pokemon *pokemon in pokemonsIniciais) {
         index++;
         NSLog(@"%d - %@\n", index, [pokemon nome]);
     }
+    
     printf("\n\nEscolha o seu pokemon: ");
-    int aux = [Utils lerEntradaDoUsuarioComInt];
-    return [pokemonsIniciais objectAtIndex:aux];
+    //validaçao de escolha do pokemon.
+    do {
+        aux = [Utils lerEntradaDoUsuarioComInt];
+    } while((aux != 1 && aux != 2 && aux != 3));
+    
+    return [pokemonsIniciais objectAtIndex:aux-1];
+    
 }
 
 +(Jogador*)cadastrarJogador:(NSArray*)pokemonsIniciais{
-    NSString * sex = [Utils lerEntradaDoUsuarioComMensagem:
-                      @"Olá jovem treinador! Meu nome é Prof. Jabosa. Neste "
-                      "mundo existe criaturas chamadas pokemons e seu dever é capturá-las."
-                      "Mas primeiro, me diga. Voce é um garoto ou uma garota?\n"];
+    
+    int n;
+    NSString * sex;
+
+    printf("Olá jovem treinador! Meu nome é Prof. Jabosa. Neste "
+           "mundo existe criaturas chamadas pokemons e seu dever é capturá-las."
+           "Mas primeiro, me diga. Voce é um garoto ou uma garota?\n 1 - Garoto\n 2 - Garota\n");
+    
+    do{
+        n = [Utils lerEntradaDoUsuarioComInt];
+    }while(n != 1 && n != 2);
+    
+    if(n == 1) sex = @"Garoto";
+    else  sex = @"Garota";
+    
     NSString * nomePlayer = [Utils lerEntradaDoUsuarioComMensagem:
                              @"\nAgora me diga, qual o seu nome?\n"];
     Pokemon * pokemon = [Utils chooseFirstPokemon:pokemonsIniciais];
