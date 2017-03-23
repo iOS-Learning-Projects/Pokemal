@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Pokemon.h"
 
 @interface Ginasio : NSObject
-    
+
 @property (retain) NSString * nome;
 @property (retain) NSObject * lider;
 
 -(instancetype)initWithNome:(NSString*)currentNome;
+-(BOOL)batalhar:(Pokemon*)desafiante andPokemon:(Pokemon*)desafiado;
+-(NSString*)comparaTipos:(NSString*)tipoDesafiante andTipo:(NSString*)tipoDesafiado;
 
 @end
+
