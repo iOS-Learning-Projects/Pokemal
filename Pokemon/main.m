@@ -21,23 +21,12 @@ int main(int argc, const char * argv[]) {
         [pokeMundo iniciarMundo];
         
         //Primeiro Login
-        
-        
-        //NSIndexSet *indexSet = [NSIndexSet indexSet];
-        //NSArray *indexArray = @[@(0), @(1), @(2)];
         NSMutableArray *pokemonsIniciais = [[NSMutableArray alloc]init];
         for(int i=0; i < 3; i++){
             [pokemonsIniciais insertObject:[pokeMundo.pokemons objectAtIndex:i] atIndex:i];
         }
-        //for (NSNumber *number in indexArray) {
-        //    [indexSet addIndex:[number unsignedIntegerValue]];
-        //}
-        //[pokemonsIniciais
-         
-        //return [self.pokemons objectsAtIndexes:indexSet];
-         
-         
-        Jogador *player = [Utils cadastrarJogador:pokeMundo.pokemons];
+        
+        Jogador *player = [Utils cadastrarJogador:pokemonsIniciais];
         
 //        NSString * sex = [Utils lerEntradaDoUsuarioComMensagem:
 //                          @"Olá jovem treinador! Meu nome é Prof. Jabosa. Neste "
