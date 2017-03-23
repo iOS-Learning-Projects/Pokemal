@@ -35,6 +35,7 @@ int main(int argc, const char * argv[]) {
                 case 1: [player informacoesJogador];
                     break;
                 case 2:
+                    [pokeMundo showGinasions];
                     break;
                 case 3:
                     break;
