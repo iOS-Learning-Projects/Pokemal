@@ -23,5 +23,6 @@
                   andSexo:(NSString*)currentSex andPokemons:(NSMutableArray*)currentPokemons;
 -(Pokemon*)procurarPokemons:(NSArray*)listaPokemons;
 -(NSArray*)melhoresPokemons;
+-(void)informacoesJogador;
 
 @end

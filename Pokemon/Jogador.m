@@ -74,4 +74,17 @@
     return [self.pokemons objectsAtIndexes:indexSet];
 }
 
+-(void)informacoesJogador{
+    printf("ID: %d\n", [self idJogador]);
+    printf("Nome: %s\n", [self.nome UTF8String]);
+    printf("Sexo: %s\n", [self.sexo UTF8String]);
+    printf("\nLista de Pokemons:\n");
+    for(Pokemon *pokemon in [self pokemons]){
+        printf("\tNome: %s\n", [pokemon.nome UTF8String]);
+        printf("\tTipo: %s\n", [pokemon.tipo UTF8String]);
+        printf("\tLevel: %d\n", [pokemon level]);
+        printf("\tExp: %d\n\n", [pokemon exp]);
+    }
+}
+
 @end
