@@ -14,7 +14,7 @@
 @synthesize ginasios = _ginasios;
 @synthesize pokemons = _pokemons;
 
--(instancetype)initWithGinasios:(NSMutableArray*)currentGinasios com:(NSMutableArray*)currentPokemons{
+-(instancetype)initWithGinasios:(NSMutableArray*)currentGinasios comPokemons:(NSMutableArray*)currentPokemons{
     self = [super init];
     if (self) {
         _ginasios = currentGinasios;

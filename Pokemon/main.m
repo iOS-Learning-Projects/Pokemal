@@ -10,9 +10,32 @@
 #import "Jogador.h"
 #import "Utils.h"
 #import "Pokedex.h"
+#import "Ginasio.h"
+#import "PokeMundo.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        //Gerar Pokemundo
+        NSMutableArray *iniciais = [[NSMutableArray alloc]init];
+        Pokemon *bulbasaur = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA"];
+        Pokemon *charmander = [[Pokemon alloc]initWithNome:@"Charmander" andTipo:@"FOGO"];
+        Pokemon *squirtle = [[Pokemon alloc]initWithNome:@"Squirtle" andTipo:@"AGUA"];
+        [iniciais addObject: bulbasaur];
+        [iniciais addObject: charmander];
+        [iniciais addObject: squirtle];
+        
+        NSMutableArray *ginasios = [[NSMutableArray alloc]init];
+        Ginasio *pewter = [[Ginasio alloc]initWithNome:@"Pewter"];
+        Ginasio *cerulean = [[Ginasio alloc]initWithNome:@"Cerulean"];
+        Ginasio *vermilion = [[Ginasio alloc]initWithNome:@"Vermilion"];
+        Ginasio *celadon = [[Ginasio alloc]initWithNome:@"Celadon"];
+        [iniciais addObject: pewter];
+        [iniciais addObject: cerulean];
+        [iniciais addObject: vermilion];
+        [iniciais addObject: celadon];
+        
+        PokeMundo *pokeMundo = [[PokeMundo alloc]initWithGinasios:ginasios comPokemons:iniciais];
+        
         
         
         //Primeiro Login

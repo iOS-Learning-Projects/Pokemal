@@ -17,6 +17,8 @@
 @property (retain) NSMutableArray * jogadores;
 @property (retain) NSMutableArray * ginasios;
 @property (retain) NSMutableArray * pokemons;
-    
+
+-(instancetype)init NS_UNAVAILABLE;
+-(instancetype)initWithGinasios:(NSMutableArray*)currentGinasios comPokemons:(NSMutableArray*)currentPokemons;
 
 @end
