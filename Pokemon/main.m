@@ -21,7 +21,12 @@ int main(int argc, const char * argv[]) {
         [pokeMundo iniciarMundo];
         
         //Primeiro Login
-        Jogador *player = [Utils cadastrarJogador:pokeMundo.pokemons];
+        NSMutableArray *pokemonsIniciais = [[NSMutableArray alloc]init];
+        for(int i=0; i < 3; i++){
+            [pokemonsIniciais insertObject:[pokeMundo.pokemons objectAtIndex:i] atIndex:i];
+        }
+        
+        Jogador *player = [Utils cadastrarJogador:pokemonsIniciais];
         
         
         
