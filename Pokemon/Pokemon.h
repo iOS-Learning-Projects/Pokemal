@@ -12,10 +12,10 @@
 
 @property (retain) NSString * nome;
 @property (retain) NSString * tipo;
-@property (retain, nonatomic) NSNumber * exp;
-@property (retain, nonatomic) NSNumber * level;
+@property int exp;
+@property int level;
 
 -(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo;
--(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo andExp:(NSNumber*)currentExp andLevel:(NSNumber*)currentLevel;
+-(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo andExp:(int)currentExp andLevel:(int)currentLevel;
 
 @end

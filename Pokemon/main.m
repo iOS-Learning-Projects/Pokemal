@@ -16,7 +16,6 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //Gerar Pokemundo
-        
         PokeMundo *pokeMundo = [[PokeMundo alloc]init];
         [pokeMundo iniciarMundo];
         
@@ -27,34 +26,28 @@ int main(int argc, const char * argv[]) {
         }
         
         Jogador *player = [Utils cadastrarJogador:pokemonsIniciais];
-        
-        
-        
-//        NSString * sex = [Utils lerEntradaDoUsuarioComMensagem:
-//                          @"Olá jovem treinador! Meu nome é Prof. Jabosa. Neste "
-//                          "mundo existe criaturas chamadas pokemons e seu dever é capturá-las."
-//                          "Mas primeiro, me diga. Voce é um garoto ou uma garota?\n"];
-//
-//        NSString * nomePlayer = [Utils lerEntradaDoUsuarioComMensagem:
-//                                 @"\nAgora me diga, qual o seu nome?\n"];
-//
-//        NSString * nomePokemon = [Utils lerEntradaDoUsuarioComMensagem:
-//                                  @"Ir nessa jornada sozinho é muito perigoso. "
-//                                  "Por favor, leve um pokemon com voce"];
-//
-//        nomePokemon = @"Charmander";
 
-        //escolhe primeiro pokemon dentre Charmander, Bulbasauro, e Squirtle.
-        
-        ///---
-        
-//        [player init: arc4random_uniform(100) com:nomePlayer com: sex com:first]; // inicializa o jogador.
-        
-        
-        
-        
-        
-        
+        int option;
+        while(YES) {
+            [Utils showMenu];
+            option = [Utils lerEntradaDoUsuarioComInt];
+
+            switch (option) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 0:
+                    return 0;
+                    break;
+                default:
+                    break;
+            }
+        };
     }
     return 0;
 }

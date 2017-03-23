@@ -13,7 +13,9 @@
 
 +(NSString *)lerEntradaDoUsuario;
 +(NSString *)lerEntradaDoUsuarioComMensagem:(NSString *)mensagem;
++(int)lerEntradaDoUsuarioComInt;
 
 +(Jogador*)cadastrarJogador:(NSArray*)pokemonsIniciais;
++(void)showMenu;
 
 @end

@@ -36,21 +36,6 @@
     return entradaDoUsuario;
 }
 
-
-//+(int)chooseFirstPokemon {
-//    NSDictionary *pokedeck = [Pokedex showPokemons];
-//    
-//    printf("\nEscolha o seu pokemon: \n");
-//    
-//    int index = 0;
-//    for (NSString *pokemon in pokedeck.keyEnumerator) {
-//        index++;
-//        printf("%d - %s\n", index, [pokemon UTF8String]);
-//    }
-//    return index;
-//}
-
-
 +(Pokemon*)chooseFirstPokemon:(NSArray *)pokemonsIniciais{
     
     int aux;
@@ -96,6 +81,16 @@
     Jogador *player = [[Jogador alloc]initWithID:arc4random_uniform(100) andNome:nomePlayer andSexo:sex andPokemon: pokemon];
     
     return player;
+}
+
+
++(void)showMenu {
+    printf("\nEscolha uma Opçao:\n"
+           "1 - Mostrar minhas informações\n"
+           "2 - Mostrar ginásios\n"
+           "3 - Desafiar lider de ginásio\n"
+           "4 - Procurar Pokemon\n"
+           "0 - Sair do Jogo\n");
 }
 
 @end
