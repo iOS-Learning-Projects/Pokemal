@@ -52,15 +52,27 @@
 
 
 +(Pokemon*)chooseFirstPokemon:(NSArray *)pokemonsIniciais{
+    
+    int aux;
+    
     printf("\nIr nessa jornada sozinho é muito perigoso. \nPor favor, leve um pokemon com voce\n");
     int index = 0;
     for (Pokemon *pokemon in pokemonsIniciais) {
         index++;
         NSLog(@"%d - %@\n", index, [pokemon nome]);
     }
+    
     printf("\n\nEscolha o seu pokemon: ");
-    int aux = [Utils lerEntradaDoUsuarioComInt];
-    return [pokemonsIniciais objectAtIndex:aux];
+    //validaçao de escolha do pokemon.
+    do {
+        aux = [Utils lerEntradaDoUsuarioComInt];
+    } while((aux != 1 && aux != 2 && aux != 3));
+    
+    return [pokemonsIniciais objectAtIndex:aux-1];
+
+    
+    
+    
 }
 
 +(Jogador*)cadastrarJogador:(NSArray*)pokemonsIniciais{
