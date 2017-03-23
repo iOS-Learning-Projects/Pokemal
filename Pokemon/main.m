@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
             option = [Utils lerEntradaDoUsuarioComInt];
 
             switch (option) {
-                case 1:
+                case 1: [player informacoesJogador];
                     break;
                 case 2:
                     break;

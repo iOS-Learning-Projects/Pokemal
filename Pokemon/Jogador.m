@@ -26,7 +26,9 @@
         _idJogador = currentID;
         _nome = currentNome;
         _sexo =currentSex;
-        _pokemons[0] = firstPokemon;
+        _pokemons = [NSMutableArray array];
+        [_pokemons addObject:firstPokemon];
+
     }
     return self;
 }
@@ -75,15 +77,14 @@
 }
 
 -(void)informacoesJogador{
-    printf("ID: %d\n", [self idJogador]);
-    printf("Nome: %s\n", [self.nome UTF8String]);
-    printf("Sexo: %s\n", [self.sexo UTF8String]);
+    printf("ID\t        Nome\t      Sexo\n");
+    printf("-----------------------\n");
+    printf("%-6d %-6s %s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
     printf("\nLista de Pokemons:\n");
+    printf("Nome\t  Tipo\t  Level\t Exp\n");
+    printf("--------------------------------\n");
     for(Pokemon *pokemon in [self pokemons]){
-        printf("\tNome: %s\n", [pokemon.nome UTF8String]);
-        printf("\tTipo: %s\n", [pokemon.tipo UTF8String]);
-        printf("\tLevel: %d\n", [pokemon level]);
-        printf("\tExp: %d\n\n", [pokemon exp]);
+        printf("%-6s %-6s %-7d %d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
     }
 }
 

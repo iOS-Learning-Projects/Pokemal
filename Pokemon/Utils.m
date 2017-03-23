@@ -76,8 +76,13 @@
     NSString * nomePlayer = [Utils lerEntradaDoUsuarioComMensagem:
                              @"\nAgora me diga, qual o seu nome?\n"];
     Pokemon * pokemon = [Utils chooseFirstPokemon:pokemonsIniciais];
+    [pokemon setLevel:3];
+    [pokemon setExp:0];
+    
     
     Jogador *player = [[Jogador alloc]initWithID:arc4random_uniform(100) andNome:nomePlayer andSexo:sex andPokemon: pokemon];
+    
+    NSLog(@"\n%lu\n", (unsigned long)[player.pokemons count]);
     
     return player;
 }
