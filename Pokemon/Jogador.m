@@ -50,8 +50,8 @@
     }
     Pokemon *pokemon = [[Pokemon alloc]init];
     pokemon = listaPokemons[arc4random_uniform((int)[listaPokemons count])];
-    pokemon.exp = [NSNumber numberWithUnsignedInteger:arc4random_uniform(99)];
-    pokemon.level = [NSNumber numberWithUnsignedInteger:arc4random_uniform(5)];
+    pokemon.exp = arc4random_uniform(99);
+    pokemon.level = arc4random_uniform(5);
     if(self.tentarCapturarPokemon)
         return pokemon;
     return nil;
