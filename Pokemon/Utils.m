@@ -7,7 +7,6 @@
 //
 
 #import "Utils.h"
-#import "Pokedex.h"
 #import "Jogador.h"
 #import "PokeMundo.h"
 

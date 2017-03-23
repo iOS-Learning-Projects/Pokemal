@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Jogador.h"
 #import "Utils.h"
-#import "Pokedex.h"
 #import "Ginasio.h"
 #import "PokeMundo.h"
 

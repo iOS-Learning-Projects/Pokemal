@@ -37,9 +37,9 @@
     BOOL vence = YES;
     BOOL perde = NO;
     
-    if([[desafiante exp]intValue] - [[desafiado exp]intValue] >= 3){
+    if([desafiado exp] - [desafiado exp] >= 3){
         return vence;
-    }else if([[desafiado exp]intValue] - [[desafiante exp]intValue] >= 3) return perde;
+    }else if([desafiado exp] - [desafiante exp] >= 3) return perde;
     
         if([desafiante tipo] != [desafiado tipo]){
             

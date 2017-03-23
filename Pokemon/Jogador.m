@@ -50,8 +50,8 @@
     }
     Pokemon *pokemon = [[Pokemon alloc]init];
     pokemon = listaPokemons[arc4random_uniform((int)[listaPokemons count])];
-    pokemon.exp = [NSNumber numberWithUnsignedInteger:arc4random_uniform(99)];
-    pokemon.level = [NSNumber numberWithUnsignedInteger:arc4random_uniform(5)];
+    pokemon.exp = arc4random_uniform(99);
+    pokemon.level = arc4random_uniform(5);
     if(self.tentarCapturarPokemon)
         return pokemon;
     return nil;
@@ -72,6 +72,19 @@
         [indexSet addIndex:[number unsignedIntegerValue]];
     }
     return [self.pokemons objectsAtIndexes:indexSet];
+}
+
+-(void)informacoesJogador{
+    printf("ID: %d\n", [self idJogador]);
+    printf("Nome: %s\n", [self.nome UTF8String]);
+    printf("Sexo: %s\n", [self.sexo UTF8String]);
+    printf("\nLista de Pokemons:\n");
+    for(Pokemon *pokemon in [self pokemons]){
+        printf("\tNome: %s\n", [pokemon.nome UTF8String]);
+        printf("\tTipo: %s\n", [pokemon.tipo UTF8String]);
+        printf("\tLevel: %d\n", [pokemon level]);
+        printf("\tExp: %d\n\n", [pokemon exp]);
+    }
 }
 
 @end
