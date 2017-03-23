@@ -28,6 +28,8 @@ int main(int argc, const char * argv[]) {
         
         Jogador *player = [Utils cadastrarJogador:pokemonsIniciais];
         
+        
+        
 //        NSString * sex = [Utils lerEntradaDoUsuarioComMensagem:
 //                          @"Olá jovem treinador! Meu nome é Prof. Jabosa. Neste "
 //                          "mundo existe criaturas chamadas pokemons e seu dever é capturá-las."
