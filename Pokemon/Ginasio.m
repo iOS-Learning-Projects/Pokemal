@@ -26,6 +26,7 @@
     self = [super init];
     if (self) {
         _nome = currentNome;
+        _lider = currentLider;
     }
     return self;
 }

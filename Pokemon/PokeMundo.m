@@ -91,11 +91,11 @@
 }
 
 -(void)showGinasions {
-    printf("\t\t\tGinasios\t\t\t\n\n");
-    printf("Nome do Ginasio\tLider do Ginásio\n");
+    printf("Nome do Ginasio\t    Lider do Ginásio\n");
+    printf("---------------------------------------\n");
 
     for (Ginasio *ginasio in self.ginasios) {
-        printf("%s\t%s\n", [[ginasio nome] UTF8String], [[[ginasio lider] nome] UTF8String]);
+        printf("%-17s\t%-20s\n", [[ginasio nome] UTF8String], [[[ginasio lider] nome] UTF8String]);
     }
 }
 
