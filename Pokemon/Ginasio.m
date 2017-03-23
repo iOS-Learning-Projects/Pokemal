@@ -23,40 +23,45 @@
 }
 
 //Ocorre a batalha
-//-(BOOL)batalhar:(Pokemon*)desafiante andPokemon:(Pokemon*)desafiado{
-//    
-//    BOOL vence = YES;
-//    BOOL perde = NO;
-//    
-//    if([[desafiante exp]intValue] - [[desafiado exp]intValue] >= 3){
-//        return vence;
-//    }else{
-//        if([desafiante tipo] != [desafiado tipo]){
-//            NSString *tipoVencedor;
-//            //Inserir metodo de comparacao de tipos.
-//            
-//            if([desafiante tipo] == tipoVencedor) return vence;
-//            else return perde;
-//        }else{
-//            if([desafiante level] > [desafiado level]){
-//                return vence;
-//            }else{
-//                if([desafiante level] < [desafiado level]) return perde;
-//            }
-//        }
-//    }
-//    
-//    int n = arc4random_uniform(2);
-//    switch (n) {
-//        case 1:
-//            return vence;
-//            break;
-//            
-//        case 2:
-//            return perde;
-//            break;
-//    }
-//}
-
+-(BOOL)batalhar:(Pokemon*)desafiante andPokemon:(Pokemon*)desafiado{
+    
+    BOOL vence = YES;
+    BOOL perde = NO;
+    
+    if([[desafiante exp]intValue] - [[desafiado exp]intValue] >= 3){
+        return vence;
+    }else if([[desafiado exp]intValue] - [[desafiante exp]intValue] >= 3) return perde;
+    
+        if([desafiante tipo] != [desafiado tipo]){
+            
+            NSArray * aux = @[@"AGUA", @"FOGO", @"GRAMA", @"AGUA"];
+            
+            long int a = [aux indexOfObject:[desafiante tipo]];
+            long int b = [aux indexOfObject:[desafiado tipo]];
+            
+            if(a == b+1) return vence;
+            else return perde;
+            
+        }else{
+            if([desafiante level] > [desafiado level]){
+                return vence;
+            }else if([desafiante level] < [desafiado level]) return perde;
+            
+        }
+    
+    int n = arc4random_uniform(2);
+    switch (n) {
+        case 0:
+            return vence;
+            break;
+            
+        case 1:
+            return perde;
+            break;
+    }
+    
+    NSLog(@"DEU MERDA");
+    return perde;
+}
 
 @end

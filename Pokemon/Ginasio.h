@@ -16,7 +16,7 @@
 
 -(instancetype)initWithNome:(NSString*)currentNome;
 -(BOOL)batalhar:(Pokemon*)desafiante andPokemon:(Pokemon*)desafiado;
--(NSString*)comparaTipos:(NSString*)tipoDesafiante andTipo:(NSString*)tipoDesafiado;
+
 
 @end
 

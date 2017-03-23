@@ -72,6 +72,7 @@
     
 }
 
+//Cadastra um Player.
 +(Jogador*)cadastrarJogador:(NSArray*)pokemonsIniciais{
     
     int n;
@@ -79,7 +80,7 @@
 
     printf("Olá jovem treinador! Meu nome é Prof. Jabosa. Neste "
            "mundo existe criaturas chamadas pokemons e seu dever é capturá-las."
-           "Mas primeiro, me diga. Voce é um garoto ou uma garota?\n 1 - Garoto\n 2 - Garota\n");
+           "Mas primeiro, me diga. Voce é um garoto ou uma garota?\n1 - Garoto\n2 - Garota\n");
     
     do{
         n = [Utils lerEntradaDoUsuarioComInt];
