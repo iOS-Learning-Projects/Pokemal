@@ -20,4 +20,6 @@
 
 -(instancetype)initWithGinasios:(NSMutableArray*)currentGinasios comPokemons:(NSMutableArray*)currentPokemons;
 -(void)iniciarMundo;
+
+-(void)showGinasions;
 @end

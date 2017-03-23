@@ -13,7 +13,7 @@
 @interface Ginasio : NSObject
 
 @property (retain) NSString * nome;
-@property (retain) NSObject * lider;
+@property (retain) Jogador * lider;
 
 -(instancetype)initWithNome:(NSString*)currentNome;
 -(instancetype)initWithNome:(NSString*)currentNome andLider:(Jogador*)currentLider;
