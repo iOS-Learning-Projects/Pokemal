@@ -28,15 +28,41 @@
     Pokemon *bulbasaur = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA"];
     Pokemon *charmander = [[Pokemon alloc]initWithNome:@"Charmander" andTipo:@"FOGO"];
     Pokemon *squirtle = [[Pokemon alloc]initWithNome:@"Squirtle" andTipo:@"AGUA"];
+//    Pokemon *squirtle = [[Pokemon alloc]initWithNome:@"Geodude" andTipo:@"AGUA"];
+//    Pokemon *squirtle = [[Pokemon alloc]initWithNome:@"Squirtle" andTipo:@"AGUA"];
+//    Pokemon *squirtle = [[Pokemon alloc]initWithNome:@"Squirtle" andTipo:@"AGUA"];
+//    Pokemon *squirtle = [[Pokemon alloc]initWithNome:@"Squirtle" andTipo:@"AGUA"];
+//    Pokemon *squirtle = [[Pokemon alloc]initWithNome:@"Squirtle" andTipo:@"AGUA"];
+
     [iniciais addObject: bulbasaur];
     [iniciais addObject: charmander];
     [iniciais addObject: squirtle];
-//    
-//    NSMutableArray *lideres = [[NSMutableArray alloc]init];
-//    Pokemon *brockPokemon1 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
-//    Pokemon *brockPokemon2 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
-//    Pokemon *brockPokemon3 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
-//    Jogador *brock = [Jogador alloc]initWithID:101 andNome:@"Brock" andSexo:"M" andPokemon:<#(Pokemon *)#>];
+    
+    NSMutableArray *lideres = [[NSMutableArray alloc]init];
+    
+    NSMutableArray *pokemonsBrock = [[NSMutableArray alloc]init];
+    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    Jogador *brock = [[Jogador alloc]initWithID:101 andNome:@"Brock" andSexo:@"garoto" andPokemons:pokemonsBrock];
+    
+    NSMutableArray *pokemonsMisty = [[NSMutableArray alloc]init];
+    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsMisty addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    Jogador *misty = [[Jogador alloc]initWithID:101 andNome:@"Misty" andSexo:@"garota" andPokemons:pokemonsMisty];
+    
+    NSMutableArray *pokemonsLtSurge = [[NSMutableArray alloc]init];
+    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsLtSurge addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    Jogador *ltSurge = [[Jogador alloc]initWithID:101 andNome:@"LtSurge" andSexo:@"garoto" andPokemons:pokemonsLtSurge];
+    
+    NSMutableArray *pokemonsErika = [[NSMutableArray alloc]init];
+    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    [pokemonsErika addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
+    Jogador *erika = [[Jogador alloc]initWithID:101 andNome:@"Erika" andSexo:@"garota" andPokemons:pokemonsErika];
     
     NSMutableArray *ginasios = [[NSMutableArray alloc]init];
     Ginasio *pewter = [[Ginasio alloc]initWithNome:@"Pewter"];

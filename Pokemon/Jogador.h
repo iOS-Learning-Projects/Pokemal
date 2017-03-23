@@ -19,8 +19,9 @@
 
 -(instancetype)init NS_UNAVAILABLE;
 -(instancetype)initWithID:(int)currentID andNome:(NSString*)currentNome andSexo:(NSString*)currentSex andPokemon:(Pokemon*)firstPokemon;
+-(instancetype)initWithID:(int)currentID andNome:(NSString*)currentNome
+                  andSexo:(NSString*)currentSex andPokemons:(NSMutableArray*)currentPokemons;
 -(Pokemon*)procurarPokemons:(NSArray*)listaPokemons;
-
 -(NSArray*)melhoresPokemons;
 
 @end

@@ -31,6 +31,18 @@
     return self;
 }
 
+-(instancetype)initWithID:(int)currentID andNome:(NSString*)currentNome
+                  andSexo:(NSString*)currentSex andPokemons:(NSMutableArray*)currentPokemons {
+    self = [super init];
+    if (self) {
+        _idJogador = currentID;
+        _nome = currentNome;
+        _sexo =currentSex;
+        _pokemons = currentPokemons;
+    }
+    return self;
+}
+
 // Retorna um Pokemon aleatorio ou nulo
 -(Pokemon*)procurarPokemons:(NSArray*)listaPokemons{
     if([self.pokemons count] > 5){
