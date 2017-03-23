@@ -53,12 +53,14 @@
 
 +(Pokemon*)chooseFirstPokemon:(NSArray *)pokemonsIniciais{
     printf("\nIr nessa jornada sozinho é muito perigoso. \nPor favor, leve um pokemon com voce\n");
+    int index = 0;
     for (Pokemon *pokemon in pokemonsIniciais) {
-        printf("%lu - %s\n", (unsigned long)[pokemonsIniciais count], [pokemon nome]);
+        index++;
+        NSLog(@"%d - %@\n", index, [pokemon nome]);
     }
     printf("\n\nEscolha o seu pokemon: ");
-    int index = [Utils lerEntradaDoUsuarioComInt];
-    return [pokemonsIniciais objectAtIndex:index];
+    int aux = [Utils lerEntradaDoUsuarioComInt];
+    return [pokemonsIniciais objectAtIndex:aux];
 }
 
 +(Jogador*)cadastrarJogador:(NSArray*)pokemonsIniciais{

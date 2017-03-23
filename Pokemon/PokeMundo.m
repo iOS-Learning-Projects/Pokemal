@@ -31,22 +31,22 @@
     [iniciais addObject: bulbasaur];
     [iniciais addObject: charmander];
     [iniciais addObject: squirtle];
-    
-    NSMutableArray *lideres = [[NSMutableArray alloc]init];
-    Pokemon *brockPokemon1 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
-    Pokemon *brockPokemon2 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
-    Pokemon *brockPokemon3 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
-    Jogador *brock = [Jogador alloc]initWithID:101 andNome:@"Brock" andSexo:"M" andPokemon:<#(Pokemon *)#>];
+//    
+//    NSMutableArray *lideres = [[NSMutableArray alloc]init];
+//    Pokemon *brockPokemon1 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
+//    Pokemon *brockPokemon2 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
+//    Pokemon *brockPokemon3 = [[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]];
+//    Jogador *brock = [Jogador alloc]initWithID:101 andNome:@"Brock" andSexo:"M" andPokemon:<#(Pokemon *)#>];
     
     NSMutableArray *ginasios = [[NSMutableArray alloc]init];
     Ginasio *pewter = [[Ginasio alloc]initWithNome:@"Pewter"];
     Ginasio *cerulean = [[Ginasio alloc]initWithNome:@"Cerulean"];
     Ginasio *vermilion = [[Ginasio alloc]initWithNome:@"Vermilion"];
     Ginasio *celadon = [[Ginasio alloc]initWithNome:@"Celadon"];
-    [iniciais addObject: pewter];
-    [iniciais addObject: cerulean];
-    [iniciais addObject: vermilion];
-    [iniciais addObject: celadon];
+    [ginasios addObject: pewter];
+    [ginasios addObject: cerulean];
+    [ginasios addObject: vermilion];
+    [ginasios addObject: celadon];
     
     self.pokemons = iniciais;
     self.ginasios = ginasios;

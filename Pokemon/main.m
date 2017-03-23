@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
         //Gerar Pokemundo
         
         PokeMundo *pokeMundo = [[PokeMundo alloc]init];
-        pokeMundo.iniciarMundo;
+        [pokeMundo iniciarMundo];
         
         //Primeiro Login
         Jogador *player = [Utils cadastrarJogador:pokeMundo.pokemons];

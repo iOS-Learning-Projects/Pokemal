@@ -14,9 +14,9 @@
 
 @interface PokeMundo : NSObject
     
-@property (retain) NSMutableArray * jogadores;
-@property (retain) NSMutableArray * ginasios;
-@property (retain) NSMutableArray * pokemons;
+@property (retain, nonatomic) NSMutableArray * jogadores;
+@property (retain, nonatomic) NSMutableArray * ginasios;
+@property (retain, nonatomic) NSMutableArray * pokemons;
 
 -(instancetype)initWithGinasios:(NSMutableArray*)currentGinasios comPokemons:(NSMutableArray*)currentPokemons;
 -(void)iniciarMundo;
