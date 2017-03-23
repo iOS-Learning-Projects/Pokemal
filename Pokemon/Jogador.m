@@ -43,5 +43,20 @@
     
 }
 
+-(BOOL)tentarCapturarPokemon{
+    NSNumber* chance = [NSNumber numberWithUnsignedInteger:arc4random_uniform(100)];
+    NSNumber* limite = [NSNumber numberWithInt:50];
+    return chance >= limite ? YES : NO;
+}
+
+-(NSArray*)melhoresPokemons{
+    [self.pokemons sortUsingSelector:@selector(compare:)];
+    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
+    NSArray *indexArray = @[@(0), @(1), @(2)];
+    for (NSNumber *number in indexArray) {
+        [indexSet addIndex:[number unsignedIntegerValue]];
+    }
+    return [self.pokemons objectsAtIndexes:indexSet];
+}
 
 @end
