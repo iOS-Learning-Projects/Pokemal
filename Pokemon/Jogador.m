@@ -31,14 +31,14 @@
     return self;
 }
 
+
 // Retorna um Pokemon aleatorio ou nulo
--(Pokemon*)procurarPokemon{
+-(Pokemon*)procurarPokemons:(NSArray*)listaPokemons{
     if([self.pokemons count] > 5){
         return nil;
     }
-    PokeMundo *mundo = [[PokeMundo alloc]init];
     Pokemon *pokemon = [[Pokemon alloc]init];
-    pokemon = mundo.pokemons[arc4random_uniform((int)[mundo.pokemons count])];
+    pokemon = listaPokemons[arc4random_uniform((int)[listaPokemons count])];
     pokemon.exp = [NSNumber numberWithUnsignedInteger:arc4random_uniform(99)];
     pokemon.level = [NSNumber numberWithUnsignedInteger:arc4random_uniform(5)];
     if(self.tentarCapturarPokemon)

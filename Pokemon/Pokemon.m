@@ -24,5 +24,16 @@
     return self;
 }
 
+-(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo andExp:(NSNumber*)currentExp andLevel:(NSNumber*)currentLevel {
+    self = [super init];
+    if (self) {
+        _nome = currentNome;
+        _tipo = currentTipo;
+        _exp = currentExp;
+        _level = currentLevel;
+    }
+    return self;
+}
+
 
 @end
