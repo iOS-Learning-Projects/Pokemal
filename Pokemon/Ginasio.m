@@ -22,6 +22,15 @@
     return self;
 }
 
+-(instancetype)initWithNome:(NSString*)currentNome andLider:(Jogador*)currentLider{
+    self = [super init];
+    if (self) {
+        _nome = currentNome;
+    }
+    return self;
+}
+
+
 //Ocorre a batalha
 -(BOOL)batalhar:(Pokemon*)desafiante andPokemon:(Pokemon*)desafiado{
     

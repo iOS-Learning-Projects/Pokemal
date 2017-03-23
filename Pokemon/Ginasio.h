@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Pokemon.h"
+#import "Jogador.h"
 
 @interface Ginasio : NSObject
 
@@ -15,6 +16,7 @@
 @property (retain) NSObject * lider;
 
 -(instancetype)initWithNome:(NSString*)currentNome;
+-(instancetype)initWithNome:(NSString*)currentNome andLider:(Jogador*)currentLider;
 -(BOOL)batalhar:(Pokemon*)desafiante andPokemon:(Pokemon*)desafiado;
 
 

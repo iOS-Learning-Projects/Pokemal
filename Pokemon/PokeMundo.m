@@ -38,8 +38,6 @@
     [iniciais addObject: charmander];
     [iniciais addObject: squirtle];
     
-    NSMutableArray *lideres = [[NSMutableArray alloc]init];
-    
     NSMutableArray *pokemonsBrock = [[NSMutableArray alloc]init];
     [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
     [pokemonsBrock addObject:[[Pokemon alloc]initWithNome:@"Bulbasaur" andTipo:@"GRAMA" andExp:0 andLevel:[NSNumber numberWithInt:2]]];
@@ -65,10 +63,10 @@
     Jogador *erika = [[Jogador alloc]initWithID:101 andNome:@"Erika" andSexo:@"garota" andPokemons:pokemonsErika];
     
     NSMutableArray *ginasios = [[NSMutableArray alloc]init];
-    Ginasio *pewter = [[Ginasio alloc]initWithNome:@"Pewter"];
-    Ginasio *cerulean = [[Ginasio alloc]initWithNome:@"Cerulean"];
-    Ginasio *vermilion = [[Ginasio alloc]initWithNome:@"Vermilion"];
-    Ginasio *celadon = [[Ginasio alloc]initWithNome:@"Celadon"];
+    Ginasio *pewter = [[Ginasio alloc]initWithNome:@"Pewter" andLider:brock];
+    Ginasio *cerulean = [[Ginasio alloc]initWithNome:@"Cerulean" andLider:misty];
+    Ginasio *vermilion = [[Ginasio alloc]initWithNome:@"Vermilion" andLider:ltSurge];
+    Ginasio *celadon = [[Ginasio alloc]initWithNome:@"Celadon" andLider:erika];
     [ginasios addObject: pewter];
     [ginasios addObject: cerulean];
     [ginasios addObject: vermilion];
