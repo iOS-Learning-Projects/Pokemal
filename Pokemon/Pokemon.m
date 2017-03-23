@@ -24,7 +24,7 @@
     return self;
 }
 
--(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo andExp:(NSNumber*)currentExp andLevel:(NSNumber*)currentLevel {
+-(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo andExp:(int)currentExp andLevel:(int)currentLevel {
     self = [super init];
     if (self) {
         _nome = currentNome;
@@ -33,6 +33,17 @@
         _level = currentLevel;
     }
     return self;
+}
+
+-(void)recebeExp:(int)moreExp{
+    
+    self.exp +=moreExp;
+    
+    if(self.exp >= 100){
+        self.exp -= 100;
+        self.level++;
+    }
+    
 }
 
 
