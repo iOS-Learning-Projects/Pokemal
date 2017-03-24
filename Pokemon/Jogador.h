@@ -24,5 +24,6 @@
 -(Pokemon*)procurarPokemons:(NSArray*)listaPokemons;
 -(NSArray*)melhoresPokemons;
 -(void)informacoesJogador;
+-(void)addPokemon:(Pokemon*)newPoke;
 
 @end

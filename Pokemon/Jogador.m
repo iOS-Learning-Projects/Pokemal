@@ -47,7 +47,7 @@
 
 // Retorna um Pokemon aleatorio ou nulo
 -(Pokemon*)procurarPokemons:(NSArray*)listaPokemons{
-    if([self.pokemons count] > 5){
+    if([self.pokemons count] >= 5){
         return nil;
     }
     Pokemon *pokemon = [[Pokemon alloc]init];
@@ -86,6 +86,12 @@
     for(Pokemon *pokemon in [self pokemons]){
         printf("%-6s %-6s %-7d %d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
     }
+}
+
+-(void)addPokemon:(Pokemon*)newPoke{
+    
+    [[self pokemons]addObject:newPoke];
+    
 }
 
 @end

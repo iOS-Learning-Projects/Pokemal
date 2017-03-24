@@ -10,6 +10,7 @@
 #import "Jogador.h"
 #import "Utils.h"
 #import "Ginasio.h"
+#import "Pokemon.h"
 #import "PokeMundo.h"
 
 int main(int argc, const char * argv[]) {
@@ -25,6 +26,7 @@ int main(int argc, const char * argv[]) {
         }
         
         Jogador *player = [Utils cadastrarJogador:pokemonsIniciais];
+        Pokemon *newPoke = [[Pokemon alloc]init];
 
         int option;
         while(YES) {
@@ -41,6 +43,11 @@ int main(int argc, const char * argv[]) {
                 case 3:
                     break;
                 case 4:
+                    newPoke = [player procurarPokemons:[pokeMundo pokemons]];
+                    if(newPoke != nil){
+                        NSLog(@"Parabens, voce capturou um %@", [newPoke nome]);
+                        [player addPokemon:newPoke];
+                    }else NSLog(@"Falha na captura");
                     break;
                 case 0:
                     return 0;
