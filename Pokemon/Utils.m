@@ -43,7 +43,7 @@
     int index = 0;
     for (Pokemon *pokemon in pokemonsIniciais) {
         index++;
-        NSLog(@"%d - %@\n", index, [pokemon nome]);
+        printf("%d - %s\n", index, [[pokemon nome]UTF8String]);
     }
     
     printf("\n\nEscolha o seu pokemon: ");
