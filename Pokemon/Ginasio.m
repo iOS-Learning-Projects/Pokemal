@@ -32,46 +32,67 @@
 }
 
 
+-(void)desafiarLiderWithDesafiante:(Jogador *)desafiante {
+    [desafiante melhoresPokemons];
+    [_lider melhoresPokemons];
+
+    Pokemon *pokDesafiante;
+    Pokemon *pokDesafiado;
+
+    int derrotasDesafiante = 0;
+    int derrotasDesafiado = 0;
+
+    for (int i = 0; i < 3; i++) {
+        pokDesafiante = [[desafiante pokemons] objectAtIndex:derrotasDesafiante];
+        pokDesafiado = [[_lider pokemons] objectAtIndex:derrotasDesafiado];
+
+        BOOL desafianteVenceuBatalha = [self batalhar:pokDesafiante andPokemon:pokDesafiado];
+        if (desafianteVenceuBatalha) {
+            [[[desafiante pokemons]objectAtIndex:derrotasDesafiante]recebeExp:35];
+            [[[_lider pokemons]objectAtIndex:derrotasDesafiado]recebeExp:10];
+            derrotasDesafiado++;
+        } else {
+            [[[_lider pokemons]objectAtIndex:derrotasDesafiado]recebeExp:35];
+            [[[desafiante pokemons]objectAtIndex:derrotasDesafiante]recebeExp:10];
+            derrotasDesafiante++;
+        }
+    }
+
+    if (derrotasDesafiante < 2) { //Desafiante ganhou o desafio
+        printf("\nParabéns! Você é o novo líder do ginásio %s.\n", [[self nome] UTF8String]);
+        _lider = desafiante;
+    } else { //Desafiante perdeu o desafio
+        printf("\nInfelizmente você perdeu o desafio.");
+    }
+}
+
 //Ocorre a batalha
 -(BOOL)batalhar:(Pokemon*)desafiante andPokemon:(Pokemon*)desafiado{
-    
     BOOL vence = YES;
     BOOL perde = NO;
+    int resultadoVencedor = desafiante.level-desafiado.level;
+    int resultadoPerdedor = desafiado.level-desafiante.level;
     
-    if([desafiado exp] - [desafiado exp] >= 3){
+    if(resultadoVencedor >= 3)
         return vence;
-    }else if([desafiado exp] - [desafiante exp] >= 3) return perde;
-    
-        if([desafiante tipo] != [desafiado tipo]){
-            
-            NSArray * aux = @[@"AGUA", @"FOGO", @"GRAMA", @"AGUA"];
-            
-            long int a = [aux indexOfObject:[desafiante tipo]];
-            long int b = [aux indexOfObject:[desafiado tipo]];
-            
-            if(a == b+1) return vence;
-            else return perde;
-            
-        }else{
-            if([desafiante level] > [desafiado level]){
-                return vence;
-            }else if([desafiante level] < [desafiado level]) return perde;
-            
-        }
-    
-    int n = arc4random_uniform(2);
-    switch (n) {
-        case 0:
+    if(resultadoPerdedor >= 3)
+        return perde;
+
+    if([desafiante tipo] != [desafiado tipo]){
+        NSArray * aux = @[@"AGUA", @"FOGO", @"GRAMA", @"AGUA"];
+
+        long int a = [aux indexOfObject:[desafiante tipo]];
+        long int b = [aux indexOfObject:[desafiado tipo]];
+
+        return (a == b + 1) ? vence : perde;
+    }else{
+        if([desafiante exp] > [desafiado exp])
             return vence;
-            break;
-            
-        case 1:
+        if([desafiante exp] < [desafiado exp])
             return perde;
-            break;
+        int n = arc4random_uniform(2);
+        return (n == 0) ? perde : vence;
     }
-    
-    NSLog(@"DEU MERDA");
-    return perde;
 }
 
 @end

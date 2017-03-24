@@ -53,7 +53,7 @@
     Pokemon *pokemon = [[Pokemon alloc]init];
     pokemon = listaPokemons[arc4random_uniform((int)[listaPokemons count])];
     pokemon.exp = arc4random_uniform(99);
-    pokemon.level = arc4random_uniform(5);
+    pokemon.level = arc4random_uniform(15);
     if(self.tentarCapturarPokemon)
         return pokemon;
     return nil;
@@ -66,14 +66,8 @@
     return chance >= limite ? YES : NO;
 }
 
--(NSArray*)melhoresPokemons{
+-(void)melhoresPokemons{
     [self.pokemons sortUsingSelector:@selector(compare:)];
-    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
-    NSArray *indexArray = @[@(0), @(1), @(2)];
-    for (NSNumber *number in indexArray) {
-        [indexSet addIndex:[number unsignedIntegerValue]];
-    }
-    return [self.pokemons objectsAtIndexes:indexSet];
 }
 
 -(void)informacoesJogador{

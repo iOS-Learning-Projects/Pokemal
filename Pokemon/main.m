@@ -41,6 +41,7 @@ int main(int argc, const char * argv[]) {
                     [pokeMundo showGinasions];
                     break;
                 case 3:
+                    [pokeMundo desafiarGinasioWithDesafiante:player];
                     break;
                 case 4:
                     newPoke = [player procurarPokemons:[pokeMundo pokemons]];

@@ -22,7 +22,7 @@
 -(instancetype)initWithID:(int)currentID andNome:(NSString*)currentNome
                   andSexo:(NSString*)currentSex andPokemons:(NSMutableArray*)currentPokemons;
 -(Pokemon*)procurarPokemons:(NSArray*)listaPokemons;
--(NSArray*)melhoresPokemons;
+-(void)melhoresPokemons;
 -(void)informacoesJogador;
 -(void)addPokemon:(Pokemon*)newPoke;
 

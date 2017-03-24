@@ -17,5 +17,6 @@
 
 -(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo;
 -(instancetype)initWithNome:(NSString *)currentNome andTipo:(NSString*)currentTipo andExp:(int)currentExp andLevel:(int)currentLevel;
+-(void)recebeExp:(int)moreExp;
 
 @end

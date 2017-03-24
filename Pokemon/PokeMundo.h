@@ -22,4 +22,7 @@
 -(void)iniciarMundo;
 
 -(void)showGinasions;
+
+-(void)desafiarGinasioWithDesafiante:(Jogador *)desafiante;
+
 @end

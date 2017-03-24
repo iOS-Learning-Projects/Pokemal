@@ -7,6 +7,7 @@
 //
 
 #import "PokeMundo.h"
+#import "Utils.h"
 
 @implementation PokeMundo
 
@@ -91,12 +92,31 @@
 }
 
 -(void)showGinasions {
-    printf("Nome do Ginasio\t    Lider do Ginásio\n");
+    printf("\n#   Nome do Ginasio\t    Lider do Ginásio\n");
     printf("---------------------------------------\n");
 
+    int i = 1;
     for (Ginasio *ginasio in self.ginasios) {
-        printf("%-17s\t%-20s\n", [[ginasio nome] UTF8String], [[[ginasio lider] nome] UTF8String]);
+        printf("%d   %-17s\t%-20s\n", i, [[ginasio nome] UTF8String], [[[ginasio lider] nome] UTF8String]);
+        i++;
     }
+}
+
+// O usuário escolhe com quem quer batalhar
+-(void)desafiarGinasioWithDesafiante:(Jogador *)desafiante {
+    if ([[desafiante pokemons]count] < 3) {
+        printf("\nVocê precisa ter ao menos 3 pokemons para realizar um desafio.\n");
+        return;
+    }
+    printf("\nEscolha o ginásio que deseja desafiar:\n");
+    [self showGinasions];
+
+    int option;
+    do {
+        option = [Utils lerEntradaDoUsuarioComInt] - 1;
+    } while (option < 0 && option > 3);
+
+    [_ginasios[option] desafiarLiderWithDesafiante:desafiante];
 }
 
 @end

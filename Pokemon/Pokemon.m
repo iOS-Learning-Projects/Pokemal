@@ -42,5 +42,9 @@
     
 }
 
+-(NSComparisonResult)compare:(Pokemon *)otherPokemon {
+    return self.level < otherPokemon.level;
+}
+
 
 @end
