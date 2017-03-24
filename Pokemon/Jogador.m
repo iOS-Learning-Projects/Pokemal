@@ -55,9 +55,23 @@
     Pokemon *pokemon = [[Pokemon alloc]init];
     pokemon = listaPokemons[arc4random_uniform((int)[listaPokemons count])];
     pokemon.exp = arc4random_uniform(99);
-    pokemon.level = arc4random_uniform(15);
-    if(self.tentarCapturarPokemon)
-        return pokemon;
+    do {
+        pokemon.level = arc4random_uniform(15);
+    } while (pokemon.level == 0);
+    NSLog(@"Voce encontrou um %@.",[pokemon nome]);
+    printf("\n%-20.20s%-20.20s%-20.20s%-20.20s\n","Nome", "Tipo", "Lvl", "Exp");
+    printf("----------------------------------------------------------------\n");
+    for(Pokemon *pokemon in [self pokemons]){
+        printf("%-20.20s%-20.20s %-20d %-20d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
+    }
+    printf("\nDeseja tentar capturá-lo?\n1 - Sim\n2 - Nao");
+    do {
+        op = [Utils lerEntradaDoUsuarioComInt];
+    } while(op != 1 && op != 2);
+    if(op == 1){
+        if(self.tentarCapturarPokemon)
+            return pokemon;
+    }
     return nil;
     
 }
@@ -78,11 +92,6 @@
     printf("----------------------------------------------------------------\n");
     printf("%-20d%-20.20s%-20.20s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
     printf("\nLista de Pokemons:\n");
-    //printf("ID\t        Nome\t      Sexo\n");
-    //printf("-----------------------\n");
-    //printf("%-6d %-6s %s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
-    //printf("\nLista de Pokemons:\n");
-    //printf("Nome\t  Tipo\t  Level\t Exp\n");
     printf("\n%-20.20s%-20.20s%-20.20s%-20.20s\n","Nome", "Tipo", "Lvl", "Exp");
     printf("----------------------------------------------------------------\n");
     for(Pokemon *pokemon in [self pokemons]){

@@ -81,9 +81,7 @@
     
     
     Jogador *player = [[Jogador alloc]initWithID:arc4random_uniform(100) andNome:nomePlayer andSexo:sex andPokemon: pokemon];
-    
-    
-    
+
     return player;
 }
 
