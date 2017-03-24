@@ -8,6 +8,7 @@
 
 #import "Jogador.h"
 #import "PokeMundo.h"
+#import "Utils.h"
 
 
 @implementation Jogador{
@@ -50,14 +51,25 @@
     if([self.pokemons count] >= 5){
         return nil;
     }
+    int op;
     Pokemon *pokemon = [[Pokemon alloc]init];
     pokemon = listaPokemons[arc4random_uniform((int)[listaPokemons count])];
     pokemon.exp = arc4random_uniform(99);
     do {
         pokemon.level = arc4random_uniform(5);
     } while (pokemon.level == 0);
-    if(self.tentarCapturarPokemon)
-        return pokemon;
+    NSLog(@"Voce encontrou um %@.",[pokemon nome]);
+    printf("\nNome\t  Tipo\t  Level\t Exp\n");
+    printf("--------------------------------\n");
+    printf("\n%-6s %-6s %-7d %d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
+    printf("\nDeseja tentar capturá-lo?\n1 - Sim\n2 - Nao");
+    do {
+        op = [Utils lerEntradaDoUsuarioComInt];
+    } while(op != 1 && op != 2);
+    if(op == 1){
+        if(self.tentarCapturarPokemon)
+            return pokemon;
+    }
     return nil;
     
 }
