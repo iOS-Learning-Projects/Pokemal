@@ -59,9 +59,11 @@
         pokemon.level = arc4random_uniform(5);
     } while (pokemon.level == 0);
     NSLog(@"Voce encontrou um %@.",[pokemon nome]);
-    printf("\nNome\t  Tipo\t  Level\t Exp\n");
-    printf("--------------------------------\n");
-    printf("\n%-6s %-6s %-7d %d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
+    printf("\n%-20.20s%-20.20s%-20.20s%-20.20s\n","Nome", "Tipo", "Lvl", "Exp");
+    printf("----------------------------------------------------------------\n");
+    for(Pokemon *pokemon in [self pokemons]){
+        printf("%-20.20s%-20.20s %-20d %-20d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
+    }
     printf("\nDeseja tentar capturá-lo?\n1 - Sim\n2 - Nao");
     do {
         op = [Utils lerEntradaDoUsuarioComInt];
@@ -91,14 +93,20 @@
 }
 
 -(void)informacoesJogador{
-    printf("ID\t        Nome\t      Sexo\n");
-    printf("-----------------------\n");
-    printf("%-6d %-6s %s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
+    
+    printf("\n%-20.20s%-20.20s%-20.20s\n","ID", "Nome", "Sexo");
+    printf("----------------------------------------------------------------\n");
+    printf("%-20d%-20.20s%-20.20s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
     printf("\nLista de Pokemons:\n");
-    printf("Nome\t  Tipo\t  Level\t Exp\n");
-    printf("--------------------------------\n");
+    //printf("ID\t        Nome\t      Sexo\n");
+    //printf("-----------------------\n");
+    //printf("%-6d %-6s %s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
+    //printf("\nLista de Pokemons:\n");
+    //printf("Nome\t  Tipo\t  Level\t Exp\n");
+    printf("\n%-20.20s%-20.20s%-20.20s%-20.20s\n","Nome", "Tipo", "Lvl", "Exp");
+    printf("----------------------------------------------------------------\n");
     for(Pokemon *pokemon in [self pokemons]){
-        printf("%-6s %-6s %-7d %d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
+        printf("%-20.20s%-20.20s %-20d %-20d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
     }
 }
 
