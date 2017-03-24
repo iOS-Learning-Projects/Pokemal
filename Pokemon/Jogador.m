@@ -8,6 +8,7 @@
 
 #import "Jogador.h"
 #import "PokeMundo.h"
+#import "Utils.h"
 
 
 @implementation Jogador{
@@ -50,6 +51,7 @@
     if([self.pokemons count] >= 5){
         return nil;
     }
+    int op;
     Pokemon *pokemon = [[Pokemon alloc]init];
     pokemon = listaPokemons[arc4random_uniform((int)[listaPokemons count])];
     pokemon.exp = arc4random_uniform(99);
@@ -71,14 +73,20 @@
 }
 
 -(void)informacoesJogador{
-    printf("ID\t        Nome\t      Sexo\n");
-    printf("-----------------------\n");
-    printf("%-6d %-6s %s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
+    
+    printf("\n%-20.20s%-20.20s%-20.20s\n","ID", "Nome", "Sexo");
+    printf("----------------------------------------------------------------\n");
+    printf("%-20d%-20.20s%-20.20s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
     printf("\nLista de Pokemons:\n");
-    printf("Nome\t  Tipo\t  Level\t Exp\n");
-    printf("--------------------------------\n");
+    //printf("ID\t        Nome\t      Sexo\n");
+    //printf("-----------------------\n");
+    //printf("%-6d %-6s %s\n", [self idJogador], [self.nome UTF8String], [self.sexo UTF8String]);
+    //printf("\nLista de Pokemons:\n");
+    //printf("Nome\t  Tipo\t  Level\t Exp\n");
+    printf("\n%-20.20s%-20.20s%-20.20s%-20.20s\n","Nome", "Tipo", "Lvl", "Exp");
+    printf("----------------------------------------------------------------\n");
     for(Pokemon *pokemon in [self pokemons]){
-        printf("%-6s %-6s %-7d %d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
+        printf("%-20.20s%-20.20s %-20d %-20d\n", [pokemon.nome UTF8String], [pokemon.tipo UTF8String], [pokemon level], [pokemon exp]);
     }
 }
 
