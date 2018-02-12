@@ -11,9 +11,7 @@
 #import "Utils.h"
 
 
-@implementation Jogador{
-    
-}
+@implementation Jogador
 
 @synthesize idJogador = _idJogador;
 @synthesize nome = _nome;

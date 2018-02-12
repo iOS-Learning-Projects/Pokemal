@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Personagem.h"
 
-@interface Pokemon : NSObject
+@interface Pokemon : NSObject <Personagem>
 
 @property (retain) NSString * nome;
 @property (retain) NSString * tipo;

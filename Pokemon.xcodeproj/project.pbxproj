@@ -13,6 +13,7 @@
 		9EC2DEBF1E7C2BB600D59AE1 /* Ginasio.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2DEBE1E7C2BB600D59AE1 /* Ginasio.m */; };
 		9EC2DEC51E7C491400D59AE1 /* PokeMundo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2DEC41E7C491400D59AE1 /* PokeMundo.m */; };
 		E824F9BD1E80764700F4E7A1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E824F9BC1E80764700F4E7A1 /* Utils.m */; };
+		E8F96C411E97FE9D006B819D /* Personagem.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F96C401E97FE9D006B819D /* Personagem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		9EC2DEC41E7C491400D59AE1 /* PokeMundo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokeMundo.m; sourceTree = "<group>"; };
 		E824F9BB1E80764700F4E7A1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		E824F9BC1E80764700F4E7A1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		E8F96C3F1E97FE9D006B819D /* Personagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personagem.h; sourceTree = "<group>"; };
+		E8F96C401E97FE9D006B819D /* Personagem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personagem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				9EC2DEB01E7C2B7B00D59AE1 /* main.m */,
+				E8F96C3F1E97FE9D006B819D /* Personagem.h */,
+				E8F96C401E97FE9D006B819D /* Personagem.m */,
 				9EC2DEB71E7C2B9900D59AE1 /* Jogador.h */,
 				9EC2DEB81E7C2B9900D59AE1 /* Jogador.m */,
 				9EC2DEBA1E7C2BA600D59AE1 /* Pokemon.h */,
@@ -147,6 +152,7 @@
 				9EC2DEBC1E7C2BA600D59AE1 /* Pokemon.m in Sources */,
 				9EC2DEB91E7C2B9900D59AE1 /* Jogador.m in Sources */,
 				9EC2DEBF1E7C2BB600D59AE1 /* Ginasio.m in Sources */,
+				E8F96C411E97FE9D006B819D /* Personagem.m in Sources */,
 				9EC2DEB11E7C2B7B00D59AE1 /* main.m in Sources */,
 				9EC2DEC51E7C491400D59AE1 /* PokeMundo.m in Sources */,
 				E824F9BD1E80764700F4E7A1 /* Utils.m in Sources */,

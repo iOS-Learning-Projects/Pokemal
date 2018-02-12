@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Pokemon.h"
+#import "Personagem.h"
 
 
-@interface Jogador : NSObject
+@interface Jogador : NSObject <Personagem>
 
 @property  int idJogador;
-@property (retain, readonly) NSString * nome;
+@property (retain) NSString * nome;
 @property (retain, readonly) NSString * sexo;
 @property (retain, nonatomic) NSMutableArray * pokemons;
 
